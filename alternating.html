@@ -10,16 +10,31 @@
 function draw(){
 	var sketch = document.getElementById('sketch');
 	var context = sketch.getContext("2d");
+	var num = prompt("ask")
+	var alter1  = parseInt(num,10) 
+if (alter1 == 0)
 	for (var i=0; i<=5; i= i + 1){
 	context.fillStyle = "#00ff00"
 	context.fillRect(i * 60,60,50,50);	
 
 	context.fillStyle = "#00ff00"
 	context.beginPath();
-	context.arc(150,150,40,0,2 * Math.PI,true) 
+	context.arc(i *20,150,10,0,2 * Math.PI,true) 
 	context.closePath();
 	context.fill();
 }
+else if (alter1 == 1)
+	for (var i=0; i<=5; i= i + 1){
+	context.fillStyle = "#00ff00"
+	context.beginPath();
+	context.arc(i * 20,60,10,0,2 * Math.PI,true) 
+	context.closePath();
+	context.fill();
+
+	context.fillStyle = "#00ff00"
+	context.fillRect(i * 60,150,50,50);	
+
+
 }
 }
 
